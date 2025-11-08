@@ -7,6 +7,8 @@ from sklearn.metrics import accuracy_score, classification_report
 data = pd.read_csv("student_data.csv")
 
 # Separăm variabilele de intrare (X) și variabila țintă (y)
+print(data.columns)
+
 X = data[["Varsta", "Nota", "Timp_de_studiu"]]
 y = data["Rezultat"]
 
