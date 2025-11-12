@@ -3,8 +3,15 @@ import pandas as pd
 
 # Citirea datelor
 df = pd.read_csv("student_data.csv")
-X = df[["Nota", "Timp_de_studiu"]]
-y = df["Promovat"]
+
+# Verificăm coloanele
+print("Coloanele disponibile în CSV:", df.columns)
+
+# Folosim doar coloanele disponibile
+X = df[["Nota", "Timp_studiu"]]
+
+# Creăm un target simplu pentru test: promovare dacă Nota >= 5
+y = (df["Nota"] >= 5).astype(str)  # "True" sau "False"
 
 # Crearea și antrenarea modelului
 model = DecisionTreeClassifier()
@@ -22,3 +29,4 @@ student_nou = [[nota, timp]]
 rezultat = model.predict(student_nou)
 
 print(f"Predicția pentru studentul cu Nota={nota} și Timp_de_studiu={timp} este: {rezultat[0]}")
+
