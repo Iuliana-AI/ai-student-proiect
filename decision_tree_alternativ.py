@@ -1,6 +1,9 @@
 from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 
+from tabulate import tabulate
+
+
 # Citirea datelor
 df = pd.read_csv("student_data.csv")
 
