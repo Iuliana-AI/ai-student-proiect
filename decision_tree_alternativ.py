@@ -3,6 +3,10 @@ import pandas as pd
 
 from tabulate import tabulate
 
+import csv
+from datetime import datetime
+
+
 
 # Citirea datelor
 df = pd.read_csv("student_data.csv")
