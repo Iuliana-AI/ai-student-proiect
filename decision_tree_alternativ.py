@@ -27,15 +27,15 @@ model.fit(X, y)
 # Interacțiune cu utilizatorul
 try:
     nota = float(input("Introdu Nota studentului: "))
-    timp = float(input("Introdu Timpul de studiu : "))
+    timp_studiu = float(input("Introdu Timpul de studiu : "))
 except ValueError:
     print("Te rog să introduci doar numere!")
     exit()
 
-student_nou = [[nota, timp]]
+student_nou = [[nota, timp_studiu]]
 rezultat = model.predict(student_nou)
 
-print(f"Predicția pentru studentul cu Nota={nota} și Timp_de_studiu={timp} este: {rezultat[0]}")
+print(f"Predicția pentru studentul cu Nota={nota} și Timp_de_studiu={timp_studiu} este: {rezultat[0]}")
 
 # Salvăm datele și rezultatul în jurnalul CSV
 with open("predictii_studenti.csv", mode="a", newline="") as fisier:
