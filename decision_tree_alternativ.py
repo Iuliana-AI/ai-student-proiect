@@ -39,3 +39,11 @@ with open("predictii_studenti.csv", mode="a", newline="") as fisier:
     writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), nota, timp_studiu, rezultat_pred])
 print("🗂️ Datele și predicția au fost salvate în 'predictii_studenti.csv'.")
 
+# Pregătim tabelul pentru afișare
+tabel = [["Nota", "Timp de studiu (ore)", "Predicție"],
+         [nota, timp_studiu, rezultat_pred]]
+
+# Afișare tabel frumos
+print("\n📄 Mini-raport student:")
+print(tabulate(tabel, headers="firstrow", tablefmt="fancy_grid"))
+
