@@ -35,7 +35,7 @@ except ValueError:
 student_nou = [[nota, timp_studiu]]
 rezultat_pred = model.predict(student_nou)
 
-print(f"Predicția pentru studentul cu Nota={nota} și Timp_de_studiu={timp_studiu} este: {rezultat[0]}")
+print(f"Predicția pentru studentul cu Nota={nota} și Timp_de_studiu={timp_studiu} este: {rezultat_pred[0]}")
 
 # Salvăm datele și rezultatul în jurnalul CSV
 with open("predictii_studenti.csv", mode="a", newline="") as fisier:
