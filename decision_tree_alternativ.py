@@ -30,3 +30,9 @@ rezultat = model.predict(student_nou)
 
 print(f"Predicția pentru studentul cu Nota={nota} și Timp_de_studiu={timp} este: {rezultat[0]}")
 
+# Salvăm datele și rezultatul în jurnalul CSV
+with open("predictii_studenti.csv", mode="a", newline="") as fisier:
+    writer = csv.writer(fisier)
+    writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), nota, timp_studiu, rezultat_pred])
+print("🗂️ Datele și predicția au fost salvate în 'predictii_studenti.csv'.")
+
