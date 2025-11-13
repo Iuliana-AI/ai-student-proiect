@@ -27,7 +27,7 @@ model.fit(X, y)
 # Interacțiune cu utilizatorul
 try:
     nota = float(input("Introdu Nota studentului: "))
-    timp = float(input("Introdu Timpul de studiu (ore): "))
+    timp = float(input("Introdu Timpul de studiu : "))
 except ValueError:
     print("Te rog să introduci doar numere!")
     exit()
@@ -44,7 +44,7 @@ with open("predictii_studenti.csv", mode="a", newline="") as fisier:
 print("🗂️ Datele și predicția au fost salvate în 'predictii_studenti.csv'.")
 
 # Pregătim tabelul pentru afișare
-tabel = [["Nota", "Timp de studiu (ore)", "Predicție"],
+tabel = [["Nota", "Timp de studiu ", "Predicție"],
          [nota, timp_studiu, rezultat_pred]]
 
 # Afișare tabel frumos
